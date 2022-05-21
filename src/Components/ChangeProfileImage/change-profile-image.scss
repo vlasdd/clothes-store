@@ -1,0 +1,54 @@
+@import "../../index.scss";
+
+.images-button-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.choose-image{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 30%;
+     min-width: 250px;
+     height: 35px;
+     background: #33a0ff;
+     border-radius: 10px;
+     box-shadow: 0px 10px 30px rgba(64, 191, 255, 0.24);
+
+     p{
+        @include text-style(white, normal, 18px);
+        margin: 0;
+        letter-spacing: 0.5px;
+    
+        @include media-breakpoint-down(lg) {
+            font-size: 17px;
+        }
+     }
+}
+
+.choose-image:hover{
+    cursor: pointer;
+}
+
+@include media-breakpoint-down(md){
+    .images-button-container{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .choose-image{
+        width: 50%;
+    }
+}
+
+@include media-breakpoint-down(sm){
+    .choose-image{
+        width: 90%;
+    }
+}

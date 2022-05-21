@@ -1,0 +1,1 @@
+export const SET_IS_PAGE_DISABLED = "SET_IS_PAGE_DISABLED";

@@ -1,0 +1,85 @@
+@import "../../index.scss";
+
+.purchase-container{
+    display: flex;
+    gap: 20px;
+    box-shadow: 2px 2px 2px #fafafb;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 15px;
+        max-width: 80%;
+    }
+
+    .purchase-name{
+        @include text-style(#22262a, 500, 16px);
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+
+    .name-amount{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        p{
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .price-date{
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+    }
+        
+    .mail {
+        width: 10%;
+        max-width: 65px;
+    }
+        
+    .blue {
+        color: $based-blue;
+    }
+        
+    .red {
+        color: $based-red;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .purchase-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .info-container {
+            max-width: 90%;
+        }
+
+        .mail{
+            width: 20%;
+        }
+
+        .name-amount {
+            p {
+                max-width: 230px;
+            }
+        }
+
+        .purchase-name {
+            font-size: 14px;
+        }
+
+        .price-date {
+            font-size: 13px;
+        }
+    }
+}

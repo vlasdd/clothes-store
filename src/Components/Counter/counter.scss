@@ -1,0 +1,29 @@
+@import "../../index.scss";
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #efefef;
+    gap: 13px;
+    height: 35px;
+    width: 70px;
+    border-radius: 5px;
+    @include text-style($based-black, 400, 14px);
+    font-family: "Poppins";
+
+    * {
+        background: #efefef;
+    }
+
+    p {
+        margin-top: 18px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .counter {
+        height: 25px;
+        width: 60px;
+    }
+}

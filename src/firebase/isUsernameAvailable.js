@@ -1,7 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./config";
 
-
 async function isUsernameAvailable(name){
     const allUsers = await getDocs(collection(db, "users"));
     let isAvailable = true;

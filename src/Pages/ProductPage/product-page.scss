@@ -1,0 +1,236 @@
+@import "../../index.scss";
+
+.item-info-container {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    p {
+        font-size: 15px;
+    }
+
+    .product-image {
+        width: 40%;
+    }
+
+    .item-info-data {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+
+        h1 {
+            @include text-style(#22262a, 500, 17px);
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .item-info-review {
+        display: flex;
+        gap: 10px;
+        box-shadow: 0px 2px 0px #fafafb;
+
+        .review-counter {
+            color: #c1c8ce;
+            margin-left: 10px;
+        }
+
+        button {
+            margin-right: 10px;
+
+            p {
+                color: $based-blue;
+            }
+        }
+    }
+
+    .product-prices {
+        gap: 10px;
+
+        p:first-child {
+            font-size: 18px;
+        }
+    }
+
+    .item-extra-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        color: $based-black;
+    }
+
+    .item-data-counter {
+        display: flex;
+        gap: 10px;
+        width: 275px;
+    }
+
+    .add-to-cart {
+        width: 155px;
+        background: #d5f9ff;
+        color: $based-blue;
+
+        * {
+            background: #d5f9ff;
+        }
+    }
+
+    .share-container {
+        display: flex;
+        width: 320px;
+        justify-content: space-between;
+        padding-top: 10px;
+
+        a {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 155px;
+            border-radius: 5px;
+
+            p {
+                margin: 8px 0 8px 0;
+                font-weight: 500;
+                font-size: 13px;
+                color: #ffffff;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        a:first-child {
+            background: #385c8e;
+        }
+
+        a:nth-child(2) {
+            background: #03a9f4;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .product-image {
+            img {
+                width: 70%;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .share-container {
+            width: 280px;
+
+            a {
+                width: 130px;
+
+                p {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+.product-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 10px;
+    gap: 5px;
+    background: #fafafb;
+
+    .title {
+        box-shadow: 0px 2px 0px #e5e8ea;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        width: 95%;
+        padding-bottom: 1px;
+
+        button {
+            background: #fafafb;
+            font-weight: 400;
+            font-size: 18px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            p{
+                color: $based-blue;
+            }
+        }
+
+        .not-chosen:hover {
+            @include addCategoriesStyle($based-blue, -3px);
+        }
+    
+        .chosen {
+            @include addCategoriesStyle($based-red, -3px);
+        }
+    }
+
+    .reviews-container{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        margin: 10px;
+    }
+}
+
+.add-button{
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: 10px;
+    color: $based-blue;
+}
+
+
+@include media-breakpoint-down(md) {
+    .product-information {
+        .title {
+            button {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .info{ 
+        font-size: 13px;
+    }
+
+    .item-info-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .product-image {
+            img {
+                width: 80%;
+            }
+        }
+
+        .item-info-data {
+            width: 90%;
+
+            .product-prices {
+                justify-content: space-between;
+            }
+        }
+
+        .item-info-review {
+            p {
+                font-size: 13px;
+            }
+        }
+
+        .product-prices {
+            p:first-child {
+                font-size: 12px;
+            }
+        }
+    }
+}

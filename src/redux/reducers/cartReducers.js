@@ -1,16 +1,10 @@
-import * as ActionTypes from "../contants/cartActionTypes"
-
-/*function amountOfAppears(obj){
-    return cartItems.reduce((value, elem) => {
-        if(elem.id == obj.id){
-            value++;
-        }
-        return value;
-    }, 0)
-}*/
+import * as ActionTypes from "../Constants/cartActionTypes"
 
 export function cartReducer(state = [], {type, payload}){
     switch(type){
+        case ActionTypes.SET_CART: {
+            return payload;
+        }
         case ActionTypes.ADD_TO_CART: {
             return [...state, payload];
         }
@@ -35,6 +29,9 @@ export function cartReducer(state = [], {type, payload}){
                 }
                 return arr;
             }, []);
+        }
+        case ActionTypes.CLEAR_CART: {
+            return [];
         }
         default: {
             return state;

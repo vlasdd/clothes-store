@@ -1,19 +1,18 @@
 import React from "react";
 import ReactDom from "react-dom";
 import App from "./App"
-import "./style.scss"
+import "./index.scss"
 import { BrowserRouter } from "react-router-dom"
-import { ContextProvider } from "./CartContext"
 import { Provider } from "react-redux"
-import store from "./redux/store"
+import store from "./Redux/store"
 
 ReactDom.render(
-    <Provider store={store}>
-        <BrowserRouter>
-            <ContextProvider>
+    <React.StrictMode>
+        <Provider store={store}>
+            <BrowserRouter>
                 <App />
-            </ContextProvider>
-        </BrowserRouter>
-    </Provider>,
+            </BrowserRouter>
+        </Provider>
+    </React.StrictMode>,
     document.getElementById("root")
 )

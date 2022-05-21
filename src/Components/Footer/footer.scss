@@ -1,0 +1,44 @@
+@import "../../index.scss";
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background: $based-green;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+
+    .info-grid-container {
+        margin-bottom: 0;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        gap: 0;
+
+        .info-grid {
+            justify-content: flex-start;
+            width: 31%;
+
+            p{
+                font-size: 15px;
+            }
+
+            .regular-text{
+                font-size: 13px;
+            }
+
+            .header{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .info-grid-container {
+            align-items: center;
+
+            .info-grid{
+                width: 80%;
+            }
+        }
+    }
+}
