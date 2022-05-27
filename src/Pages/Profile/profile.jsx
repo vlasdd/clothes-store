@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, Navigate } from 'react-router-dom'
 import { removeActiveUser } from '../../Redux/Actions/userActions'
 import * as RouteTypes from "../../Constants/routesTypes"
 import { deleteDoc, doc, getDoc } from 'firebase/firestore'
@@ -25,12 +25,6 @@ export default function Profile() {
     const [isHovered, setIsHovered] = useState();
     const [shouldUserSignOut, setShouldUserSignOut] = useState(false);
 
-    useEffect(() => {
-        if (!user.username) {
-            navigate(RouteTypes.LOGIN)
-        }
-    }, [user])
-
     const purchasesList = useMemo(() => user.purchasesList
         .map(elem => <Purchase
             purchase={elem}
@@ -38,6 +32,10 @@ export default function Profile() {
         />),
         [user.purchasesList]
     )
+    
+    if (!user.username) {
+        return <Navigate to={RouteTypes.LOGIN}/>
+    }
 
     async function deleteUser() {
         dispatch(setIsBeingLoaded(true));

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 import * as RoutesTypes from "../../Constants/routesTypes"
 import isUsernameAvailable from "../../Firebase/isUsernameAvailable";
 import { doc, updateDoc } from "firebase/firestore";
@@ -37,12 +37,6 @@ export default function ChangeProfile() {
         || profileInfo.fullName.length < 6
 
     useEffect(() => {
-        if (!user.username) {
-            navigate(RoutesTypes.LOGIN)
-        }
-    }, [])
-
-    useEffect(() => {
         async function asyncPromise() {
             if (["", "Male", "Female"].every(elem => elem !== profileInfo.gender)) {
                 setErrors("The gender can only be \"Male\" or \"Female\"");
@@ -66,6 +60,10 @@ export default function ChangeProfile() {
 
         asyncPromise();
     }, [profileInfo.username, profileInfo.gender])
+
+    if (!user.username) {
+        return <Navigate to={RoutesTypes.LOGIN} />
+    }
 
     async function handleChange() {
         dispatch(setIsBeingLoaded(true));
