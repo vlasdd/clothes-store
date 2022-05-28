@@ -98,6 +98,7 @@ export default function ChangeProfile() {
                 <img
                     src="../Images/icon.svg"
                     className="login-register-icon"
+                    alt="The company's logo"
                 />
                 <button
                     className="switch"

@@ -67,6 +67,7 @@ export default function Login(){
             <img
                 src="../Images/icon.svg"
                 className="login-register-icon"
+                alt="The company's logo"
             />
             <h1>Welcome to My Site's Name</h1>
             {error ?

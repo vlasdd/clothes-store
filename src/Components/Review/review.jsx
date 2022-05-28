@@ -11,7 +11,7 @@ export default function Review({ date, username, fullName, profileImage, text, c
             onMouseLeave={() => setIsMouseOver(false)}
         >
             <div className="review-image">
-                <img src={profileImage} />
+                <img src={profileImage} alt="Profile image"/>
             </div>
             <div className="info-container">
                 <div className="user-full-name">

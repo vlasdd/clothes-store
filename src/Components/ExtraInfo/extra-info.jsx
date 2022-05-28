@@ -9,21 +9,21 @@ export default function ExtraInfo(){
                     <h1 className="h1-default">Adidas Men Running Sneakers</h1>
                     <h2 className="h2-default">Performance and design. Taken right to the edge.</h2>
                 </div>
-                <img src="../Images/extra-shoes.svg"/>
+                <img src="../Images/extra-shoes.svg" alt="Shoes"/>
             </div>
             <div className="info-grid-container col-11">
                 <div className="info-grid">
-                    <img src="../Images/shipping.svg" />
+                    <img src="../Images/shipping.svg" alt="Shipping"/>
                     <p className="header">FREE SHIPPING</p>
                     <p className="regular-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div className="info-grid">
-                    <img src="../Images/refund.svg" />
+                    <img src="../Images/refund.svg" alt="Refund"/>
                     <p className="header">100% REFUND</p>
                     <p className="regular-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div className="info-grid">
-                    <img src="../Images/support.svg" />
+                    <img src="../Images/support.svg" alt="Support"/>
                     <p className="header">SUPPORT 24/7</p>
                     <p className="regular-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
@@ -32,19 +32,19 @@ export default function ExtraInfo(){
             <div className="info-grid-container col-11">
                 <div className="info-grid">
                     <i>01 Jan, 2022</i>
-                    <img src="../Images/nike-logo.svg" />
+                    <img src="../Images/nike-logo.svg" alt="Nike logo"/>
                     <p className="header">Fashion Industry</p>
                     <p className="regular-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div className="info-grid">
                     <i>01 Jan, 2022</i>
-                    <img src="../Images/figma-logo.svg" />
+                    <img src="../Images/figma-logo.svg" alt="Figma logo"/>
                     <p className="header">Best Design Tools</p>
                     <p className="regular-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div className="info-grid">
                     <i>01 Jan, 2022</i>
-                    <img src="../Images/support.svg" />
+                    <img src="../Images/support.svg" alt="Support"/>
                     <p className="header">HR Community</p>
                     <p className="regular-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>

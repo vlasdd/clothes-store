@@ -14,7 +14,7 @@ export default function Counter({ amount, setAmount, availableItems, data }){
                     dispatch(removeSingleItem(data));
                 }
             }}>
-                <img src="../Images/decrement.svg"/>
+                <img src="../Images/decrement.svg" alt="Increment"/>
             </button>
             <p>{amount}</p>
             <button onClick={() => {
@@ -23,7 +23,7 @@ export default function Counter({ amount, setAmount, availableItems, data }){
                     dispatch(addToCart(data));
                 }
             }}>
-                <img src="../Images/increment.svg"/>
+                <img src="../Images/increment.svg" alt="Decrement"/>
             </button>
         </div>
     )

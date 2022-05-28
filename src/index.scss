@@ -94,6 +94,14 @@ button {
     padding-bottom: 30px;
     text-align: center;
     @include text-style(#22262a, 500, 30px);
+
+    img{
+        margin-bottom: -30px;
+    }
+
+    .check-out-button{
+        max-width: 300px;
+    }
 }
 
 @include media-breakpoint-down(md) {

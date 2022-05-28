@@ -15,14 +15,14 @@ export default function Product({ data }){
         if (cart.some(elem => elem.id === data.id)) {
             return (
                 <button onClick={() => dispatch(removeItemsType(data))}>
-                    <img src="../Images/filled-cart.svg" />
+                    <img src="../Images/filled-cart.svg" alt="Cart"/>
                 </button>
             )
         }
 
         return (
             <button onClick={() => dispatch(addToCart(data))}>
-                <img src={isMouseOver ? "../Images/cart.svg" : ""} />
+                <img src={isMouseOver ? "../Images/cart.svg" : ""} alt="Cart"/>
             </button>
         )
     }
@@ -35,7 +35,7 @@ export default function Product({ data }){
         >
             <div className="product-image">
                 <Link to={`${RoutesTypes.PRODUCT_PAGE}${data.id}`}>
-                    <img src={data.image} />
+                    <img src={data.image} alt="The product's photo"/>
                 </Link>
             </div>
             <div className="product-info">

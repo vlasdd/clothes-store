@@ -74,6 +74,7 @@ export default function ChangeImage(){
                 <img
                     src={imageUpload ? URL.createObjectURL(imageUpload) : user.profileImage ? user.profileImage : "../Images/default-avatar-image.jpg"}
                     className=""
+                    alt="Your profile image"
                 />
             </div>
             {(imageUpload || user.profileImage) &&
@@ -81,7 +82,7 @@ export default function ChangeImage(){
                     className="delete-button"
                     onClick={deleteImage}
                 >
-                    <img src="../Images/delete-icon.svg" />
+                    <img src="../Images/delete-icon.svg" alt="Delete icon"/>
                     <p className="info red">Delete image</p>
                 </button>
             }

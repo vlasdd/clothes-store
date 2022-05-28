@@ -30,21 +30,21 @@ export default function Header(){
         <div className={`header-container col-12 col-sm-11 col-md-10 ${isPageDisabled && "disabled-page"}`}>
             <Link to={RoutesTypes.MAIN}>
                 <div className="header-logo">
-                    <img src="../Images/icon.svg" />
+                    <img src="../Images/icon.svg" alt="The company's icon"/>
                     <p>My Site's Name</p>
                 </div>
             </Link>
             <div className="header-nav">
                 <Link to={RoutesTypes.PROFILE}>
                     <div>
-                        <img src="../Images/profile-image.svg" />
+                        <img src="../Images/profile-image.svg" alt="Profile logo"/>
                         <p>My Profile</p>
                     </div>
                 </Link>
                 <Link to={RoutesTypes.CART}>
                     <div className="header-cart">
                         <p>Items</p>
-                        <img src={cart.length ? "../Images/filled-cart.svg" : "../Images/cart.svg"} className="fix-cart" />
+                        <img src={cart.length ? "../Images/filled-cart.svg" : "../Images/cart.svg"} className="fix-cart" alt="Cart"/>
                         <div className="basket-counter">
                             <p>{cart.length}</p>
                         </div>
@@ -53,7 +53,7 @@ export default function Header(){
                 <button onClick={() => setIsSearchActivated(prevVal => !prevVal)}>
                     <div className="search-price">
                         <p>{`$${itemsPrice}`}</p>
-                        <img src="../Images/search-icon.svg" />
+                        <img src="../Images/search-icon.svg" alt="Search"/>
                     </div>
                 </button>
                 {isSearchActivated &&
