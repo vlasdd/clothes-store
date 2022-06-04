@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState  } from "react";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 import * as RoutesTypes from "../../Constants/routesTypes"
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../Firebase/config";
@@ -23,11 +23,9 @@ export default function Login(){
 
     const isInvalid = password.length < 6 || emailAddress.length < 6
 
-    useEffect(() => {
-        if(user.username){
-            navigate(RoutesTypes.PROFILE)
-        }
-    }, [])
+    if (user.username) {
+        return <Navigate to={RoutesTypes.PROFILE}/>
+    }
 
     async function handleLogin(event){
         event.preventDefault();

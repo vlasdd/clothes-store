@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../Firebase/config";
 import { doc, setDoc, getDoc } from "firebase/firestore"; 
@@ -31,12 +31,6 @@ export default function SignUp(){
         || userData.emailAddress.length < 6
         || userData.username.length < 6
         || userData.fullName.length < 6
-        
-    useEffect(() => {
-        if(user.username){
-            navigate(RoutesTypes.PROFILE)
-        }
-    }, [])
 
     useEffect(() => {
         async function asyncHandle() {
@@ -54,6 +48,10 @@ export default function SignUp(){
 
         asyncHandle();
     }, [userData.username])
+
+    if (user.username) {
+        return <Navigate to={RoutesTypes.PROFILE} />
+    }
 
     async function handleLogin(event) {
         event.preventDefault();

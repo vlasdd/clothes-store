@@ -22,7 +22,7 @@ export default function Product({ data }){
 
         return (
             <button onClick={() => dispatch(addToCart(data))}>
-                <img src={isMouseOver ? "../Images/cart.svg" : ""} alt="Cart"/>
+                <img src={isMouseOver ? "../Images/cart.svg" : ""}/>
             </button>
         )
     }
