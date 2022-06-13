@@ -25,10 +25,10 @@ export default function ChangeImage(){
         }
         dispatch(setIsBeingLoaded(true));
 
-        if (user.profileImage !== "") {
+        /*if (user.profileImage !== "") {
             const deleteImageRef = ref(storage, user.profileImage);
             await deleteObject(deleteImageRef);
-        }
+        }*/
 
         const imageRef = ref(storage, `Images/${imageUpload.name + v4()}`)
         await uploadBytes(imageRef, imageUpload)
@@ -53,8 +53,8 @@ export default function ChangeImage(){
         }
         dispatch(setIsBeingLoaded(true));
 
-        const imageRef = ref(storage, user.profileImage);
-        await deleteObject(imageRef);
+       // const imageRef = ref(storage, user.profileImage);
+       // await deleteObject(imageRef);
 
         await updateDoc(doc(db, "users", user.userId), {
             profileImage: ""

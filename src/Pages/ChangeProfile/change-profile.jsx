@@ -94,7 +94,7 @@ export default function ChangeProfile() {
                     callback={handleChange}
                 />
             }
-            <div className={`login-register col-11 col-sm-8 col-md-9 col-lg-7 ${isPageDisabled && "disabled-page"}`}>
+            <div className={`login-register col-11 col-sm-8 col-md-9 col-lg-7 col-xl-6 ${isPageDisabled && "disabled-page"}`}>
                 <img
                     src="../Images/icon.svg"
                     className="login-register-icon"
