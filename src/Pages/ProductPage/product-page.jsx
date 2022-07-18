@@ -157,7 +157,7 @@ export default function ProductPage(){
                                 dispatch(addToCart(data))
                             }}
                         >
-                            <img src="../Images/blue-cart.svg" />
+                            <img src={process.env.PUBLIC_URL + "/Images/blue-cart.svg"} />
                             <p>Add To Cart</p>
                         </button>
                         <Counter
@@ -172,14 +172,14 @@ export default function ProductPage(){
                             className="share-facebook"
                             href="https://uk-ua.facebook.com/"
                         >
-                            <img src="../Images/facebook.svg"/>
+                            <img src={process.env.PUBLIC_URL + "/Images/facebook.svg"}/>
                             <p>Share on Facebook</p>
                         </a>
                         <a 
                             className="share-twitter"
                             href="https://twitter.com/?lang=uk"
                         >
-                            <img src="../Images/twitter.svg" />
+                            <img src={process.env.PUBLIC_URL + "/Images/twitter.svg"} />
                             <p>Share on Twitter</p>
                         </a>
                     </div>

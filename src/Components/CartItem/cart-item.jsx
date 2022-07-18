@@ -26,7 +26,7 @@ export default function CartItem({ data }){
                 <button onClick={() => {
                     dispatch(removeItemsType(data))
                 }}>
-                    <img src="../Images/delete-icon.svg" alt="Delete icon"/>
+                    <img src={process.env.PUBLIC_URL + "/Images/delete-icon.svg"} alt="Delete icon"/>
                 </button>
                 <Link to={`${RoutesTypes.PRODUCT_PAGE}${data.id}`}>
                     <img src={data.image} className="item-image" alt="The item's photo"/>

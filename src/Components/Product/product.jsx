@@ -15,14 +15,14 @@ export default function Product({ data }){
         if (cart.some(elem => elem.id === data.id)) {
             return (
                 <button onClick={() => dispatch(removeItemsType(data))}>
-                    <img src="../Images/filled-cart.svg" alt="Cart"/>
+                    <img src={process.env.PUBLIC_URL + "/Images/filled-cart.svg"} alt="Cart"/>
                 </button>
             )
         }
 
         return (
             <button onClick={() => dispatch(addToCart(data))}>
-                <img src={isMouseOver ? "../Images/cart.svg" : ""}/>
+                <img src={isMouseOver ? process.env.PUBLIC_URL + "/Images/cart.svg" : ""}/>
             </button>
         )
     }

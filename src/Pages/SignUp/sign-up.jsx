@@ -105,7 +105,7 @@ export default function SignUp(){
             exit={{ opacity: 0 }}
         >
             <img
-                src="../Images/icon.svg"
+                src={process.env.PUBLIC_URL + "/Images/icon.svg"}
                 className="login-register-icon"
             />
             <h1>Welcome to My Site's Name</h1>

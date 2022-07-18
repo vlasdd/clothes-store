@@ -14,7 +14,7 @@ export default function NotFound(){
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <img src="../Images/not-found.png" />
+            <img src={process.env.PUBLIC_URL + "/Images/not-found.png"} />
             <p className="h1-black-default">Not Found!</p>
             <button
                 onClick={() => navigate(RoutesTypes.MAIN)}

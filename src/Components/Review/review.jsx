@@ -4,8 +4,6 @@ import "./review.scss"
 export default function Review({ date, username, fullName, profileImage, text, callback, currentUser }) {
     const [isMouseOver, setIsMouseOver] = useState(false);
 
-    console.log(profileImage)
-
     return (
         <div 
             className="review-container"
@@ -13,7 +11,7 @@ export default function Review({ date, username, fullName, profileImage, text, c
             onMouseLeave={() => setIsMouseOver(false)}
         >
             <div className="review-image">
-                <img src={profileImage.length ? profileImage : "../Images/default-avatar-gray.jpg"}/>
+                <img src={profileImage.length ? profileImage : process.env.PUBLIC_URL + "/Images/default-avatar-gray.jpg"}/>
             </div>
             <div className="info-container">
                 <div className="user-full-name">

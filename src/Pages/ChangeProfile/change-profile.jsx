@@ -96,7 +96,7 @@ export default function ChangeProfile() {
             }
             <div className={`login-register col-11 col-sm-8 col-md-9 col-lg-7 col-xl-6 ${isPageDisabled && "disabled-page"}`}>
                 <img
-                    src="../Images/icon.svg"
+                    src={process.env.PUBLIC_URL + "/Images/icon.svg"}
                     className="login-register-icon"
                     alt="The company's logo"
                 />

@@ -72,7 +72,7 @@ export default function ChangeImage(){
             <p className="info">Push <b>Upload an image</b> and <b>Save</b> to continue</p>
             <div className="profile-image">
                 <img
-                    src={imageUpload ? URL.createObjectURL(imageUpload) : user.profileImage ? user.profileImage : "../Images/default-avatar-image.jpg"}
+                    src={imageUpload ? URL.createObjectURL(imageUpload) : user.profileImage ? user.profileImage : process.env.PUBLIC_URL +  "/Images/default-avatar-image.jpg"}
                     className=""
                     alt="Your profile image"
                 />
@@ -82,7 +82,7 @@ export default function ChangeImage(){
                     className="delete-button"
                     onClick={deleteImage}
                 >
-                    <img src="../Images/delete-icon.svg" alt="Delete icon"/>
+                    <img src={process.env.PUBLIC_URL + "/Images/delete-icon.svg"} alt="Delete icon"/>
                     <p className="info red">Delete image</p>
                 </button>
             }

@@ -82,7 +82,7 @@ export default function Profile() {
             >
                 <div className="profile-image">
                     <img
-                        src={user.profileImage || "../Images/default-avatar-image.jpg"}
+                        src={user.profileImage || process.env.PUBLIC_URL + "/Images/default-avatar-image.jpg"}
                         className=""
                     />
                 </div>
@@ -127,28 +127,28 @@ export default function Profile() {
                     <div className="profile-features">
                         <div className="profile-feature">
                             <div>
-                                <img src="../Images/user.svg" />
+                                <img src={process.env.PUBLIC_URL + "/Images/user.svg"} />
                                 <h1>Gender</h1>
                             </div>
                             <p className="info">{user.gender || "unknown"}</p>
                         </div>
                         <div className="profile-feature">
                             <div>
-                                <img src="../Images/date.svg" />
+                                <img src={process.env.PUBLIC_URL + "/Images/date.svg"} />
                                 <h1>Birthday</h1>
                             </div>
                             <p className="info">{user.birthday || "unknown"}</p>
                         </div>
                         <div className="profile-feature">
                             <div>
-                                <img src="../Images/message.svg" />
+                                <img src={process.env.PUBLIC_URL + "/Images/message.svg"} />
                                 <h1>Email</h1>
                             </div>
                             <p className="info">{user.emailAddress}</p>
                         </div>
                         <div className="profile-feature">
                             <div>
-                                <img src="../Images/phone.svg" />
+                                <img src={process.env.PUBLIC_URL + "/Images/phone.svg"} />
                                 <h1>Phone number</h1>
                             </div>
                             <p className="info">{user.phoneNumber || "unknown"}</p>
