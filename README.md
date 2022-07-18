@@ -36,6 +36,6 @@ Complete
 
 ## Usage
 
-To Visit This App(**!!!Currently is not supported**): `https://vlased.github.io/clothes-store/`
+To Visit This App: **https://Vlased.github.io/clothes-store/#/**
 
  

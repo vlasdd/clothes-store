@@ -1,6 +1,6 @@
 {
   "homepage": "https://Vlased.github.io/clothes-store/",
-  "name": "second-app",
+  "name": "clothes-store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
