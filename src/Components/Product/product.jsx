@@ -4,15 +4,16 @@ import * as RoutesTypes from "../../Constants/routesTypes"
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeItemsType } from "../../Redux/Actions/cartActions";
 import "./product.scss";
+import useWindowWidth from "../../Helpers/useWindowWidth";
 
 export default function Product({ data }){
     const cart = useSelector(obj => obj.cart);
     const [isMouseOver, setIsMouseOver] = useState(false)
     const dispatch = useDispatch();
+    const width = useWindowWidth();
 
     function defineButton() {
-        console.log()
-        if (cart.some(elem => elem.id === data.id)) {
+        if (cart.some(elem => elem.id === data.id) && width > 730) {
             return (
                 <button onClick={() => dispatch(removeItemsType(data))}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -22,7 +23,7 @@ export default function Product({ data }){
             )
         }
 
-        if(isMouseOver){
+        if(isMouseOver && width > 730){
             return (
                 <button onClick={() => dispatch(addToCart(data))}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
