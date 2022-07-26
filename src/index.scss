@@ -145,10 +145,9 @@ button {
     gap: 17px;
 
     button {
-       // margin-bottom: 10px;
         background: white;
         outline: none;
-        @include text-style($based-black, 500, 15px);
+        @include text-style($based-black, 500, 16px);
     }
 
     .not-chosen:hover {
@@ -163,7 +162,7 @@ button {
 @include media-breakpoint-down(sm) {
     .products-bar {
         button {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 }
@@ -182,9 +181,10 @@ button {
         width: 30px;
         height: 20px;
 
-        img {
+        svg {
             height: 100%;
             width: auto;
+            color: $based-dark-grey;
         }
 
         background: white;

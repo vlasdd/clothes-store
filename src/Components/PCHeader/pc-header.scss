@@ -1,0 +1,126 @@
+@import "../../index.scss";
+
+.header-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2px #fafafb;
+    border-radius: 20px;
+    gap: 20px;
+
+    .fix-cart{
+        margin-top: 15px;
+        width: 23px;
+        height: 23px;
+    }
+}
+
+.header-logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: 30px;
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+
+    p {
+        margin-top: 17px;
+        @include text-style(black, bold, 15px);
+    }
+}
+
+.header-nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+
+    a:hover {
+        cursor: pointer;
+        color: $based-red;
+    }
+
+    div {
+        display: flex;
+        gap: 10px;
+        font-family: "Montserrat";
+        font-size: 15px;
+        font-weight: 400;
+
+        p {
+            margin-top: 17px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
+    }
+}
+
+.header-cart{
+    margin-right: -30px;
+}
+
+.basket-counter {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 100%;
+    background: $based-red;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20px;
+    top: 7px;
+
+    p {
+        @include text-style(white, 500, 12px);
+    }
+}
+
+.search-price {
+    margin-right: 20px;
+    p {
+        opacity: 0.5;
+    }
+}
+
+.search-price:hover {
+    color: $based-blue;
+}
+
+.search-wrapper{
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    margin-top: 2px;
+    background: white;
+    border-radius: 10px;
+    width: 250px;
+}
+
+// @include media-breakpoint-down(sm) {
+//     .search-wrapper{
+//         top: 200%;
+//     }
+
+//     .header-container {
+//         flex-direction: column-reverse;
+//         gap: 0px;
+
+//         .header-logo {
+//             justify-content: center;
+//             margin-right: 5%;
+//         }
+
+//         .header-nav {
+//             justify-content: center;
+//             gap: 17px;
+//         }
+//     }
+// }

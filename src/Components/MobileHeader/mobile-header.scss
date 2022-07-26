@@ -1,0 +1,58 @@
+@import "../../index.scss";
+
+.mobile-header{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+
+    button{
+        background-color: inherit;
+    }
+
+    svg{
+        width: 40px;
+        height: 40px;
+        color: $based-blue;
+    }
+}
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+        width: 150px;
+        display: flex;
+        gap: 10px;
+        justify-content: start;
+        align-items: center;
+        background-color: rgba(255,255,255,0);
+
+        svg{
+            width: 25px;
+            height: 25px;
+            color: $based-light-grey;
+        }
+    }
+
+    img {
+        height: 50px;
+        width: 50px;
+    }
+
+    p{
+        @include text-style(white, normal, 17px);
+        margin: 0;
+    }
+}
