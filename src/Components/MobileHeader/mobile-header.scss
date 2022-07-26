@@ -29,7 +29,6 @@
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    justify-content: center;
 
     .container{
         width: 150px;
@@ -49,6 +48,7 @@
     img {
         height: 50px;
         width: 50px;
+        margin-top: 25%;
     }
 
     p{
