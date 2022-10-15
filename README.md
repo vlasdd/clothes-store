@@ -37,5 +37,6 @@ Complete
 ## Usage
 
 To Visit This App: **https://Vlased.github.io/clothes-store/#/**
+***(If you're too lazy to create an account: email: 222222@gmail.com password: 222222)***
 
  
