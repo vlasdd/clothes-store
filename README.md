@@ -1,6 +1,6 @@
 # Clothes Store Website
 
-This project is an e-commerce clothes store web app. It is built with **React.js**, **Redux**, and **SASS** 
+This project is an e-commerce clothes store web app. It is built with **React.js**, **Redux**, and **SCSS** 
 
 ## Technologies used
 
@@ -8,7 +8,7 @@ This project is an e-commerce clothes store web app. It is built with **React.js
 
 + React.js
 + Redux
-+ SASS
++ SCSS
 + Bootstrap
 + Firebase
 
